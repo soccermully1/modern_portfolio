@@ -8,11 +8,16 @@
 body {
   @include background;
   background: $primary-color;
-  color: set-text-color($primary-color);
+  color: set-text-color(#911919);
   height: 100%;
   margin: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.5;
+}
+
+.hr {
+  background-color: #ffee00;
+  opacity: 0.1;
 }
 
 // Headings
@@ -23,13 +28,13 @@ h3 {
   font-weight: 400;
 
   &.lg-heading {
-    font-size: 6rem;
+    font-size: 5rem;
   }
 
   &.sm-heading {
-    margin-bottom: 2rem;
-    padding: 0.2rem 1rem;
-    background: rgba(lighten($primary-color, 2), 0.5);
+    margin-bottom: 1rem;
+    padding: 0.2rem 0.5rem;
+    background: rgba(lighten($primary-color, 1), 0.5);
   }
 }
 
@@ -74,6 +79,10 @@ main {
   }
 }
 
+.fab {
+  margin-top: 5px;
+  margin-left: 5px;
+}
 .about-info {
   display: grid;
   grid-gap: 30px;
@@ -85,8 +94,8 @@ main {
   .bio-image {
     grid-area: bioimage;
     margin: auto;
-    border-radius: 50%;
-    border: $secondary-color 3px solid;
+    border-radius: 100%;
+    border: $secondary-color 2.5px solid;
   }
 
   .bio {
@@ -109,19 +118,19 @@ main {
   .job {
     background: lighten($primary-color, 5);
     padding: 0.5rem;
-    border-bottom: $secondary-color 5px solid;
+    border-bottom: $secondary-color 2.5px solid;
   }
 }
 
 // Work/Projects
 .projects {
-  display: grid;
+  display: inline-block;
   grid-gap: 0.7rem;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
 
   img {
     width: 100%;
-    border: 3px #fff solid;
+    border: 2px #fff solid;
 
     &:hover {
       opacity: 0.5;
@@ -184,7 +193,7 @@ main {
 #main-footer {
   text-align: center;
   padding: 1rem;
-  background: darken($primary-color, 10);
+  background: darken($primary-color, 4);
   color: set-text-color($primary-color);
   height: 60px;
 }
